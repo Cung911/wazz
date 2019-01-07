@@ -1,0 +1,142 @@
+/* --------------- Main Style --------------- */
+
+body{
+  background:$bg;
+  color:$text-main;
+  cursor: url(../images/cursor.svg), pointer;
+  -webkit-zoom-in-cursor: url(../images/cursor.svg), pointer;
+  -webkit-zoom-out-cursor: url(../images/cursor.svg), pointer;
+  -webkit-zoom-grab-cursor: url(../images/cursor.svg), pointer;
+  -webkit-zoom-grabbing-cursor: url(../images/cursor.svg), pointer;
+}
+
+
+/*--- Page - Coming Soon ----*/
+#home{
+  .wazz-logo{
+    display:block;
+    margin:0 auto 60px;
+    text-align:center;
+    visibility: hidden;
+    &:hover{
+      cursor: url(../images/cursor.svg), pointer;
+    }
+
+    img{
+      width:160px;
+    }
+  }
+  .coming-fucking-soon{
+    margin-bottom:56px;
+    visibility: hidden;
+    display:none;
+    img{
+      max-width:100%;
+    }
+  }
+  .wazz-pattern{
+    margin-bottom: 40px;
+    display:block;
+    img{
+      width:100%;
+    }
+  }
+  .social-sharing{
+    ul{
+      margin:0 auto;
+      display:table;
+      padding:0;
+      li{
+        display:inline-block;
+        a{
+          color:white;
+          display:inline-block;
+          padding:5px 15px;
+        }
+      }
+    }
+  }
+  .subscribe-form{
+    text-align: center;
+    visibility: hidden;
+    form{
+      .form-group{
+        position:relative;
+        .form-control{
+          border-radius:0;
+          border:1px solid white;
+          padding: 20px 0px 20px 20px;
+          background:transparent;
+          color:white;
+          position:relative;
+          &::placeholder{
+            color:$text-second;
+          }
+        }
+        label{
+          position:absolute;
+          top:10px;
+          left:20px;
+          opacity:1;
+          transform: translateY(0);
+          transition:all 0.2s ease-out;
+        }
+
+      }
+      .label{
+        background:#000;
+        -webkit-transform: translate(20px, -55px);
+        transform: translate(10px, -55px);
+        box-sizing: border-box;
+        font-size:12px;
+        width:80px;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      form{
+        .form-group{
+          .btn-primary{
+            margin-top:20px;
+            position:relative;
+          }
+        }
+        .label{
+          transform: translateY(-113px);
+          margin:0 auto;
+        }
+      }
+    }
+  }
+  .infinite-text{
+    background: url(../images/wazz.svg) repeat-x;
+    width:100%;
+    height:100px;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    -webkit-animation: slide 5s linear infinite;
+    @-webkit-keyframes slide {
+      from { background-position: 0 0; }
+      to { background-position: 362px 0; }
+    }
+  }
+  .video-bg{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index:-100;
+    opacity:.4;
+  }
+}
+.center-container{
+  height:100vh;
+  overflow:hidden;
+}
+
+
+/*------ TOP NAV ------*/
+.top_nav{
+  padding:2rem 0;
+}

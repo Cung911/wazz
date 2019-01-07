@@ -1,0 +1,35 @@
+- var pageTitle = 'Product Page'
+doctype html
+html.sr
+  include ./partials/_header
+  body
+    include ./partials/_top_nav
+    section#product-page
+      .container
+        .row
+          .col-md-5
+            .product-image
+              img(src='assets/images/top1large.jpg')
+          .col-md-4.offset-md-1
+            .product-detail
+              .product-name
+                h1
+                  img(src='assets/images/ska.svg')
+              .product-price
+                span $50
+              .product-description
+                p An example text right after here logo is placed on the right breast. A stretched logo is reads across the reverse atop industrial imagery.
+              
+              button.btn.btn-primary(type='button', data-toggle='modal', data-target="#order-form") Pre-Order Now
+    .form-modal
+      #order-form.modal.fade(tabindex='-1', role="dialog", aria-labelledby="ExampleModal", aria-hidden='true')
+        .modal-dialog.modal-dialog-centered.modal-lg(rol="document")
+          .modal-content
+            .modal-header
+              h5.modal-title Order Form
+              button.close(type="button", data-dismiss='modal')
+                span(aria-hidden='true')&times;
+            h4.title Test
+            p contents
+    
+  include ./partials/_footer.jade

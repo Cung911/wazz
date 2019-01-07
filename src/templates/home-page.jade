@@ -1,0 +1,30 @@
+- var pageTitle = 'Home Page'
+doctype html
+html.sr
+  include ./partials/_header.jade
+  body
+    section#home
+      .container
+        .d-flex.flex-row.align-items-center.center-container
+          .col-md-6.offset-md-3
+            a.wazz-pattern(href='#')
+              img(src='assets/images/wazz-pattern.svg')
+            
+            div.social-sharing
+              ul
+                li
+                  span Spread the world:
+                li
+                  a(href="#")
+                    i.fa.fa-facebook(aria-hidden='true')
+                li
+                  a(href="#")
+                    i.fa.fa-twitter(aria-hidden='true')
+                li
+                  a(href="#")
+                    i.fa.fa-instagram(aria-hidden='true')
+      .infinite-text
+      //- video.video-bg(autoplay='', muted='', loop='')
+      //-   source(src='assets/images/wazz-video.mp4', type='video/mp4')
+
+  include ./partials/_footer.jade
