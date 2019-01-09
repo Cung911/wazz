@@ -3790,100 +3790,194 @@ body {
   -webkit-zoom-grab-cursor: url(../images/cursor.svg), pointer;
   -webkit-zoom-grabbing-cursor: url(../images/cursor.svg), pointer; }
 
-/*--- Page - Coming Soon ----*/
-#home .wazz-logo {
-  display: block;
-  margin: 0 auto 60px;
-  text-align: center;
-  visibility: hidden; }
-  #home .wazz-logo:hover {
-    cursor: url(../images/cursor.svg), pointer; }
-  #home .wazz-logo img {
-    width: 160px; }
-
-#home .coming-fucking-soon {
-  margin-bottom: 56px;
-  visibility: hidden;
-  display: none; }
-  #home .coming-fucking-soon img {
-    max-width: 100%; }
-
-#home .wazz-pattern {
-  margin-bottom: 40px;
-  display: block; }
-  #home .wazz-pattern img {
-    width: 100%; }
-
-#home .social-sharing ul {
-  margin: 0 auto;
-  display: table;
-  padding: 0; }
-  #home .social-sharing ul li {
-    display: inline-block; }
-    #home .social-sharing ul li a {
-      color: white;
-      display: inline-block;
-      padding: 5px 15px; }
-
-#home .subscribe-form {
-  text-align: center;
-  visibility: hidden; }
-  #home .subscribe-form form .form-group {
-    position: relative; }
-    #home .subscribe-form form .form-group .form-control {
-      border-radius: 0;
-      border: 1px solid white;
-      padding: 20px 0px 20px 20px;
-      background: transparent;
-      color: white;
-      position: relative; }
-      #home .subscribe-form form .form-group .form-control::placeholder {
-        color: #9DA4C0; }
-    #home .subscribe-form form .form-group label {
-      position: absolute;
-      top: 10px;
-      left: 20px;
-      opacity: 1;
-      transform: translateY(0);
-      transition: all 0.2s ease-out; }
-  #home .subscribe-form form .label {
-    background: #000;
-    -webkit-transform: translate(20px, -55px);
-    transform: translate(10px, -55px);
-    box-sizing: border-box;
-    font-size: 12px;
-    width: 80px; }
+#homepage {
+  background: url(../images/bg-image.jpg) no-repeat;
+  background-size: cover;
+  height: 630px; }
   @media (max-width: 991.98px) {
-    #home .subscribe-form form .form-group .btn-primary {
-      margin-top: 20px;
-      position: relative; }
-    #home .subscribe-form form .label {
-      transform: translateY(-113px);
-      margin: 0 auto; } }
+    #homepage {
+      background-size: 100%;
+      background-position: 10px center; } }
+  #homepage .container {
+    height: 630px;
+    position: relative; }
+    @media (max-width: 991.98px) {
+      #homepage .container {
+        height: 100%; } }
+    #homepage .container .wazz-logo {
+      margin: 0 auto 60px;
+      text-align: center;
+      display: block;
+      z-index: 9999; }
+      #homepage .container .wazz-logo:hover {
+        cursor: url(../images/cursor.svg), pointer; }
+      #homepage .container .wazz-logo img {
+        width: 186px;
+        height: 158px;
+        position: absolute;
+        top: 60px; }
+        @media (max-width: 991.98px) {
+          #homepage .container .wazz-logo img {
+            top: 40px;
+            width: 150px; } }
+    #homepage .container .buy-button {
+      position: absolute;
+      bottom: 0;
+      left: 159px; }
+      @media (max-width: 991.98px) {
+        #homepage .container .buy-button {
+          bottom: 80px;
+          margin: 0 auto; }
+          #homepage .container .buy-button img {
+            width: 80%; } }
+    #homepage .container .rotate-image {
+      position: absolute;
+      bottom: 0;
+      right: -100px; }
+      #homepage .container .rotate-image img {
+        width: 70%;
+        animation-name: spinner;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+        transform-style: preserve-3d; }
 
-#home .infinite-text {
-  background: url(../images/wazz.svg) repeat-x;
-  width: 100%;
-  height: 100px;
-  position: fixed;
-  bottom: 0px;
-  left: 0;
-  -webkit-animation: slide 5s linear infinite; }
+@keyframes spinner {
+  from {
+    transform: rotateY(0deg); }
+  to {
+    transform: rotateY(-360deg); } }
+  #homepage .infinite-text {
+    background: url(../images/wazz.png) repeat-x;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    animation: slide 10s linear infinite;
+    -webkit-animation: slide 10s linear infinite; }
+    #homepage .infinite-text keyframes slide from {
+      background-position: 0 0; }
+    #homepage .infinite-text keyframes slide to {
+      background-position: 1062px 0; }
 
 @-webkit-keyframes slide {
   from {
     background-position: 0 0; }
   to {
-    background-position: 362px 0; } }
+    background-position: 1062px 0; } }
 
-#home .video-bg {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -100;
-  opacity: .4; }
+/*--- HomePage ----*/
+#home {
+  background-size: cover;
+  height: 630px; }
+  @media (max-width: 991.98px) {
+    #home {
+      background-size: 200%;
+      background-position: center; } }
+  #home .test {
+    position: relative;
+    border: 1px solid red;
+    height: 100vh; }
+    #home .test .col-4 {
+      border: 1px solid red; }
+    #home .test .wazz-logo {
+      display: block;
+      margin: 0 auto 60px;
+      text-align: center;
+      visibility: hidden;
+      position: absolute;
+      left: 0;
+      z-index: 999; }
+      #home .test .wazz-logo:hover {
+        cursor: url(../images/cursor.svg), pointer; }
+      #home .test .wazz-logo img {
+        width: 186px;
+        height: 158px;
+        position: absolute;
+        top: 60px; }
+    #home .test .buy-button {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block; }
+  #home .wazz-pattern {
+    margin-bottom: 40px;
+    display: block; }
+    #home .wazz-pattern img {
+      width: 100%; }
+  #home .social-sharing ul {
+    margin: 0 auto;
+    display: table;
+    padding: 0; }
+    #home .social-sharing ul li {
+      display: inline-block; }
+      #home .social-sharing ul li a {
+        color: white;
+        display: inline-block;
+        padding: 5px 15px; }
+  #home .subscribe-form {
+    text-align: center;
+    visibility: hidden; }
+    #home .subscribe-form form .form-group {
+      position: relative; }
+      #home .subscribe-form form .form-group .form-control {
+        border-radius: 0;
+        border: 1px solid white;
+        padding: 20px 0px 20px 20px;
+        background: transparent;
+        color: white;
+        position: relative; }
+        #home .subscribe-form form .form-group .form-control::placeholder {
+          color: #9DA4C0; }
+      #home .subscribe-form form .form-group label {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.2s ease-out; }
+    #home .subscribe-form form .label {
+      background: #000;
+      -webkit-transform: translate(20px, -55px);
+      transform: translate(10px, -55px);
+      box-sizing: border-box;
+      font-size: 12px;
+      width: 80px; }
+    @media (max-width: 991.98px) {
+      #home .subscribe-form form .form-group .btn-primary {
+        margin-top: 20px;
+        position: relative; }
+      #home .subscribe-form form .label {
+        transform: translateY(-113px);
+        margin: 0 auto; } }
+  #home .infinite-text {
+    background: url(../images/wazz.png) repeat-x;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    animation: slide 10s linear infinite;
+    -webkit-animation: slide 10s linear infinite; }
+    #home .infinite-text keyframes slide from {
+      background-position: 0 0; }
+    #home .infinite-text keyframes slide to {
+      background-position: 1062px 0; }
+
+@-webkit-keyframes slide {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 1062px 0; } }
+  #home .video-bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+    opacity: .4; }
 
 .center-container {
   height: 100vh;

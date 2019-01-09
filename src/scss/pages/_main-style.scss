@@ -10,30 +10,137 @@ body{
   -webkit-zoom-grabbing-cursor: url(../images/cursor.svg), pointer;
 }
 
+#homepage{
+  background:url(../images/bg-image.jpg) no-repeat;
+  background-size:cover;
+  height:630px;
+  @include media-breakpoint-down(md) {
+    background-size:100%;
+    background-position:10px center;
+  }
+  .container{
+    height:630px;
+    position: relative;
+    @include media-breakpoint-down(md) {
+      height:100%;
+    }
+    .wazz-logo{
+      margin:0 auto 60px;
+      text-align:center;
+      display: block;
+      z-index:9999;
+      &:hover{
+        cursor: url(../images/cursor.svg), pointer;
+      }
+      img{
+        width:186px;
+        height:158px;
+        position:absolute;
+        top:60px;
+        @include media-breakpoint-down(md) {
+          top:40px;
+          width:150px;
+        }
+      }
+    }
+    .buy-button{
+      position: absolute;
+      bottom:0;
+      left:159px;
+      @include media-breakpoint-down(md) {
+        bottom:80px;
+        margin:0 auto;
+        img{
+          width:80%;
 
-/*--- Page - Coming Soon ----*/
+        }
+      }
+    }
+    .rotate-image{
+      position: absolute;
+      bottom:0;
+      right:-100px;
+      img{
+        width:70%;
+        animation-name: spinner;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+        transform-style: preserve-3d;
+      }
+      @keyframes spinner {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(-360deg);
+        }
+      }
+    }
+  }
+  .infinite-text{
+    background: url(../images/wazz.png) repeat-x;
+    width:100%;
+    height:100px;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    animation: slide 10s linear infinite;
+    -webkit-animation: slide 10s linear infinite;
+    keyframes slide {
+      from { background-position: 0 0; }
+      to { background-position: 1062px 0; }
+    }
+    @-webkit-keyframes slide {
+      from { background-position: 0 0; }
+      to { background-position: 1062px 0; }
+    }
+  }
+}
+/*--- HomePage ----*/
 #home{
-  .wazz-logo{
-    display:block;
-    margin:0 auto 60px;
-    text-align:center;
-    visibility: hidden;
-    &:hover{
-      cursor: url(../images/cursor.svg), pointer;
+  // background:url(../images/bg-image.jpg) no-repeat;
+  background-size:cover;
+  height:630px;
+  @include media-breakpoint-down(md) {
+    background-size:200%;
+    background-position:center;
+  }
+  .test{
+    position:relative;
+    border:1px solid red;
+    height:100vh;
+    .col-4{
+      border:1px solid red;
     }
+    .wazz-logo{
+      display:block;
+      margin:0 auto 60px;
+      text-align:center;
+      visibility: hidden;
+      position:absolute;
+      left:0;
+      z-index:999;
+      &:hover{
+        cursor: url(../images/cursor.svg), pointer;
+      }
 
-    img{
-      width:160px;
+      img{
+        width:186px;
+        height:158px;
+        position:absolute;
+        top:60px;
+      }
+    }
+    .buy-button{
+      position: absolute;
+      right:0;
+      bottom:0;
+      display: block;
     }
   }
-  .coming-fucking-soon{
-    margin-bottom:56px;
-    visibility: hidden;
-    display:none;
-    img{
-      max-width:100%;
-    }
-  }
+
+
   .wazz-pattern{
     margin-bottom: 40px;
     display:block;
@@ -108,16 +215,21 @@ body{
     }
   }
   .infinite-text{
-    background: url(../images/wazz.svg) repeat-x;
+    background: url(../images/wazz.png) repeat-x;
     width:100%;
     height:100px;
     position: fixed;
     bottom: 0px;
     left: 0;
-    -webkit-animation: slide 5s linear infinite;
+    animation: slide 10s linear infinite;
+    -webkit-animation: slide 10s linear infinite;
+    keyframes slide {
+      from { background-position: 0 0; }
+      to { background-position: 1062px 0; }
+    }
     @-webkit-keyframes slide {
       from { background-position: 0 0; }
-      to { background-position: 362px 0; }
+      to { background-position: 1062px 0; }
     }
   }
   .video-bg{
