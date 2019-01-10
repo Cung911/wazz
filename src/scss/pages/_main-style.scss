@@ -17,6 +17,7 @@ body{
   @include media-breakpoint-down(md) {
     background-size:100%;
     background-position:10px center;
+    height:100%;
   }
   .container{
     height:630px;
@@ -40,6 +41,7 @@ body{
         @include media-breakpoint-down(md) {
           top:40px;
           width:150px;
+          position:relative;
         }
       }
     }
@@ -251,4 +253,105 @@ body{
 /*------ TOP NAV ------*/
 .top_nav{
   padding:2rem 0;
+}
+
+
+
+
+
+/*------ NEWEST------*/
+#home-page{
+  background:url(../images/bg-image.jpg) no-repeat;
+  background-size:100%;
+  @include media-breakpoint-down(md) {
+    background-position:center center;
+  }
+  .wrapper{
+    width:1140px;
+    margin:0 auto;
+    position: relative;
+    height:85vh;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+    .wazz-logo{
+      position: absolute;
+      top:0;
+      left:200px;
+      img{
+        width:186px;
+        height:158px;
+        position:absolute;
+        top:60px;
+      }
+      @include media-breakpoint-down(md) {
+        left:50%;
+        margin-left:-65px;
+        img{
+          width: 130px;
+        }
+      }
+    }
+    .buy-button{
+      position: absolute;
+      bottom:00px;
+      left:158px;
+      @include media-breakpoint-down(md) {
+        left:0;
+        bottom:150px;
+        width:100%;
+        img{
+          width:100%;
+        }
+      }
+    }
+    .spinning-image{
+      position: absolute;
+      bottom:40px;
+      right:0;
+      width:300px;
+      position: absolute;
+      bottom:0px;
+      right:0px;
+      img{
+        width: 100%;
+        animation-name: spinner;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+        transform-style: preserve-3d;
+        display: block;
+        margin-bottom: 10px;
+      }
+      @keyframes spinner {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(-360deg);
+        }
+      }
+      @include media-breakpoint-down(md) {
+        display:none;
+      }
+    }
+  }
+  .infinite-text{
+    background: url(../images/wazz.png) repeat-x;
+    width:100%;
+    height:100px;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    animation: slide 10s linear infinite;
+    -webkit-animation: slide 10s linear infinite;
+    @keyframes slide {
+      from { background-position: 0 0; }
+      to { background-position: 1062px 0; }
+    }
+    @-webkit-keyframes slide {
+      from { background-position: 0 0; }
+      to { background-position: 1062px 0; }
+    }
+  }
 }
