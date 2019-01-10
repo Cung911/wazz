@@ -295,7 +295,7 @@ body{
     .buy-button{
       position: absolute;
       bottom:00px;
-      left:158px;
+      right:0px;
       @include media-breakpoint-down(md) {
         left:0;
         bottom:150px;
@@ -308,7 +308,7 @@ body{
     .spinning-image{
       position: absolute;
       bottom:40px;
-      right:0;
+      left:0;
       width:300px;
       position: absolute;
       bottom:0px;
