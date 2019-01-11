@@ -3,26 +3,14 @@ doctype html
 html.sr
   include ./partials/_header.jade
   body
-    //- section#homepage
-    //-   .container
-    //-     .row
-    //-       .col-md-4
-    //-         a.wazz-logo(href='#')
-    //-           img(src='assets/images/wazz-logo.svg')
-    //-     a.buy-button(href='#')
-    //-       img(src="assets/images/buy-button.svg", alt="Wazzvetements")
-    //-     .rotate-image
-    //-       img(src="assets/images/rotate-image.svg", alt="Wazzvetements")
-    //-   .infinite-text
-
     div#home-page
       .wrapper
         a.wazz-logo(href='#')
           img(src='assets/images/wazz-logo.svg', alt="Wazzvetements")
         a.buy-button(href='#')
           img(src="assets/images/buy-button.svg", alt="Wazzvetements")
-        .spinning-image
-          img(src="assets/images/rotate-image.svg", alt="Wazzvetements")
+        //- .spinning-image
+        //-   img(src="assets/images/rotate-image.svg", alt="Wazzvetements")
       .infinite-text
 
   include ./partials/_footer.jade

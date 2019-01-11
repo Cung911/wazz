@@ -277,12 +277,27 @@ body{
     .wazz-logo{
       position: absolute;
       top:0;
-      left:200px;
+      left:250px;
       img{
-        width:186px;
-        height:158px;
+        width:166px;
+        // height:158px;
         position:absolute;
-        top:60px;
+        top:40px;
+        animation-name: spinner;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 2.3s;
+        transform-style: preserve-3d;
+        display: block;
+        margin-bottom: 10px;
+        @keyframes spinner {
+          from {
+            transform: rotateY(0deg);
+          }
+          to {
+            transform: rotateY(-360deg);
+          }
+        }
       }
       @include media-breakpoint-down(md) {
         left:50%;
@@ -294,8 +309,11 @@ body{
     }
     .buy-button{
       position: absolute;
-      bottom:00px;
-      right:0px;
+      bottom:10px;
+      right:-368px;
+      img{
+        width:70%;
+      }
       @include media-breakpoint-down(md) {
         left:0;
         bottom:150px;
@@ -307,8 +325,8 @@ body{
     }
     .spinning-image{
       position: absolute;
-      bottom:40px;
-      left:0;
+      bottom:0px;
+      right:0;
       width:300px;
       position: absolute;
       bottom:0px;
